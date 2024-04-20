@@ -221,8 +221,7 @@ jobs:
           name: palworld-server-toolkit-auto-update-python-plain.zip
           path: /tmp/palworld-server-toolkit-auto-update-python-plain.zip
 
-  job_3:
-    name: create release
+  create-release:
     needs: 
       - build-linux-binary
       - build-macos-binary
