@@ -206,6 +206,10 @@ jobs:
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/EternalWraith/PalEdit pal_edit
           git submodule update --remote
+      - name: create zip file
+        run: |
+          cd /tmp
+          zip palworld-server-toolkit-auto-update-python-plain palworld-server-toolkit-auto-update
       - name: show result
         run: |
           cd /tmp
@@ -215,4 +219,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: palworld-server-toolkit-auto-update-python-plain.zip
-          path: /tmp/palworld-server-toolkit-auto-update-python-plain
+          path: /tmp/palworld-server-toolkit-auto-update-python-plain.zip
