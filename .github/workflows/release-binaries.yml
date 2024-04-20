@@ -60,7 +60,7 @@ jobs:
           cp -rf /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/dist/* /tmp/palworld-server-toolkit-auto-update-linux-binary
           cp -rf /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/resources/* /tmp/palworld-server-toolkit-auto-update-linux-binary/resources
           cp -rf /tmp/palworld-server-toolkit-auto-update/palworld_pal_edit/resources/* /tmp/palworld-server-toolkit-auto-update-linux-binary/resources
-          zip -r /tmp/palworld-server-toolkit-auto-update-linux-binary.zip /tmp/palworld-server-toolkit-auto-update-linux-binary
+          zip -r palworld-server-toolkit-auto-update-linux-binary palworld-server-toolkit-auto-update-linux-binary
       - name: show result
         run: |
           cd /tmp
@@ -69,7 +69,7 @@ jobs:
       - name: uploding linux-binary artifact to workflow
         uses: actions/upload-artifact@v4
         with:
-          name: palworld-server-toolkit-auto-update-linux-binary.zip
+          name: palworld-server-toolkit-auto-update-linux-binary
           path: /tmp/palworld-server-toolkit-auto-update-linux-binary.zip
 
   build-macos-binary:
@@ -117,7 +117,7 @@ jobs:
           cp -rf /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/dist/* /tmp/palworld-server-toolkit-auto-update-macos-binary
           cp -rf /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/resources/* /tmp/palworld-server-toolkit-auto-update-macos-binary/resources
           cp -rf /tmp/palworld-server-toolkit-auto-update/palworld_pal_edit/resources/* /tmp/palworld-server-toolkit-auto-update-macos-binary/resources
-          zip -r /tmp/palworld-server-toolkit-auto-update-macos-binary.zip /tmp/palworld-server-toolkit-auto-update-macos-binary
+          zip -r palworld-server-toolkit-auto-update-macos-binary palworld-server-toolkit-auto-update-macos-binary
       - name: show result
         run: |
           cd /tmp
@@ -126,7 +126,7 @@ jobs:
       - name: uploding macos-binary artifact to workflow
         uses: actions/upload-artifact@v4
         with:
-          name: palworld-server-toolkit-auto-update-macos-binary.zip
+          name: palworld-server-toolkit-auto-update-macos-binary
           path: /tmp/palworld-server-toolkit-auto-update-macos-binary.zip
       
 
@@ -186,7 +186,7 @@ jobs:
       - name: uploding windows-binary artifact to workflow
         uses: actions/upload-artifact@v4
         with:
-          name: palworld-server-toolkit-auto-update-windows-binary.zip
+          name: palworld-server-toolkit-auto-update-windows-binary
           path: /tmp/palworld-server-toolkit-auto-update-windows-binary.zip
       
 
