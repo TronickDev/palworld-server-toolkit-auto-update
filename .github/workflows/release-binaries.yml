@@ -35,7 +35,6 @@ jobs:
           git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git palworld_save_tools
-          #git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
           git clone https://github.com/magicbear/PalEdit.git pal_edit
           git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
           git submodule update --remote
@@ -93,7 +92,6 @@ jobs:
           git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git palworld_save_tools
-          #git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
           git clone https://github.com/magicbear/PalEdit.git pal_edit
           git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
           git submodule update --remote
@@ -154,7 +152,6 @@ jobs:
           git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git palworld_save_tools
-          #git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
           git clone https://github.com/magicbear/PalEdit.git pal_edit
           git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
           git submodule update --remote
