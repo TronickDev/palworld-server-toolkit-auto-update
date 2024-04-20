@@ -25,10 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v3
 
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
@@ -61,4 +57,5 @@ jobs:
           xcopy ..\..\palworld_pal_edit\resources\* palworld-server-toolkit-auto-update-windows-binary\resources\ /E/H/Y
           xcopy ..\resources\* palworld-server-toolkit-auto-update-windows-binary\resources\ /E/H/Y
           powershell Compress-Archive \tmp\palworld-server-toolkit-auto-update\palworld_server_toolkit\dist\palworld-server-toolkit-auto-update-windows-binary \tmp\palworld-server-toolkit-auto-update-windows-binary.zip
-          echo BUILDING DONE!
+          dir \tmp
+          echo "--> BUILDING DONE! <--"
