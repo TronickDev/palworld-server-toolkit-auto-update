@@ -39,4 +39,5 @@ jobs:
           git submodule update --remote
           cd /tmp
           zip -r palworld-server-toolkit-auto-update-python-plain palworld-server-toolkit-auto-update
+          ls /tmp
           echo BUILDING DONE!
