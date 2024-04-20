@@ -32,9 +32,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          cd /
-          mkdir tmp
-          cd tmp
+          cd /tmp
           git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/EternalWraith/PalEdit pal_edit
