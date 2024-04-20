@@ -1,9 +1,0 @@
-[submodule "palworld_server_toolkit"]
-	path = palworld_server_toolkit
-	url = https://github.com/magicbear/palworld-server-toolkit.git
-[submodule "palworld_save_tools"]
-	path = palworld_save_tools
-	url = https://github.com/cheahjs/palworld-save-tools.git
-[submodule "palworld_pal_edit"]
-	path = palworld_pal_edit
-	url = https://github.com/magicbear/PalEdit.git
