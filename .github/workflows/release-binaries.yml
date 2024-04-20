@@ -209,7 +209,7 @@ jobs:
       - name: create zip file
         run: |
           cd /tmp
-          zip palworld-server-toolkit-auto-update-python-plain palworld-server-toolkit-auto-update
+          zip -r palworld-server-toolkit-auto-update-python-plain palworld-server-toolkit-auto-update
       - name: show result
         run: |
           cd /tmp
@@ -218,5 +218,5 @@ jobs:
       - name: uploding python-plain artifact to workflow
         uses: actions/upload-artifact@v4
         with:
-          name: palworld-server-toolkit-auto-update-python-plain.zip
+          name: palworld-server-toolkit-auto-update-python-plain
           path: /tmp/palworld-server-toolkit-auto-update-python-plain.zip
