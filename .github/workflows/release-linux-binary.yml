@@ -51,7 +51,8 @@ jobs:
           pyinstaller --noconfirm --onefile --windowed --hidden-import=PIL "editor.py"
           cd dist
           mkdir palworld-server-toolkit-auto-update-linux-binary
-          mv editor.exe palworld-server-toolkit-auto-update-linux-binary/
+          ls
+          mv editor palworld-server-toolkit-auto-update-linux-binary/
           mkdir palworld-server-toolkit-auto-update-linux-binary/resources
           cp -rf ../../palworld_pal_edit/resources/* palworld-server-toolkit-auto-update-linux-binary/resources/
           cp -rf ../resources/* palworld-server-toolkit-auto-update-linux-binary/resources/
