@@ -209,7 +209,7 @@ jobs:
       - name: create zip file
         run: |
           cd /tmp
-          zip -r /tmp/palworld-server-toolkit-auto-update-python-plain.zip /tmp/palworld-server-toolkit-auto-update
+          zip -r palworld-server-toolkit-auto-update-python-plain.zip palworld-server-toolkit-auto-update
       - name: show result
         run: |
           cd /tmp
