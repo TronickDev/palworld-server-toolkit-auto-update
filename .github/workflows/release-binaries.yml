@@ -22,7 +22,7 @@ jobs:
       - name: create-linux-binary
         run: |
           pip install --upgrade pip
-          pip install palworld_coord msgpack pyperclip
+          pip install palworld_coord msgpack pyperclip tkinter
           cd /tmp
           git clone https://github.com/magicbear/palworld-server-toolkit.git palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
@@ -64,7 +64,7 @@ jobs:
       - name: create-macos-binary
         run: |
           pip install --upgrade pip
-          pip install palworld_coord msgpack pyperclip
+          pip install palworld_coord msgpack pyperclip tkinter
           cd /tmp
           git clone https://github.com/magicbear/palworld-server-toolkit.git palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
