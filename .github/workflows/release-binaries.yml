@@ -38,6 +38,7 @@ jobs:
           git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
           git clone https://github.com/magicbear/PalEdit.git pal_edit
           git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
+          git submodule update --remote
           cp -rf palworld_save_tools/palworld_save_tools/* palworld_save_tools/
           cp -rf save_tools/palworld_save_tools/* save_tools/
           cp -rf pal_edit/palworld_pal_edit/* pal_edit/
@@ -95,6 +96,7 @@ jobs:
           git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
           git clone https://github.com/magicbear/PalEdit.git pal_edit
           git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
+          git submodule update --remote
           cp -rf palworld_save_tools/palworld_save_tools/* palworld_save_tools/
           cp -rf save_tools/palworld_save_tools/* save_tools/
           cp -rf pal_edit/palworld_pal_edit/* pal_edit/
@@ -155,6 +157,7 @@ jobs:
           git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
           git clone https://github.com/magicbear/PalEdit.git pal_edit
           git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
+          git submodule update --remote
           xcopy palworld_save_tools/palworld_save_tools/* palworld_save_tools/ /E/H/Y
           xcopy save_tools/palworld_save_tools/* save_tools/ /E/H/Y
           xcopy pal_edit/palworld_pal_edit/* pal_edit/ /E/H/Y
