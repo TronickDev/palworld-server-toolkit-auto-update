@@ -51,6 +51,11 @@ jobs:
           zip -r /tmp/palworld-server-toolkit-auto-update-linux-binary.zip /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/dist/palworld-server-toolkit-auto-update-linux-binary
           ls /tmp
           echo "--> BUILDING \"linux-binary\" DONE! <--"
+      - name: uploding linux-binary artifact to workflow
+        uses: actions/upload-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-linux-binary.zip
+          path: /tmp/palworld-server-toolkit-auto-update-linux-binary.zip
   
   build-macos-binary:
     runs-on: macos-latest
@@ -88,6 +93,11 @@ jobs:
           zip -r /tmp/palworld-server-toolkit-auto-update-macos-binary.zip /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/dist/palworld-server-toolkit-auto-update-macos-binary
           ls /tmp
           echo "--> BUILDING \"macos-binary\" DONE! <--"
+      - name: uploding macos-binary artifact to workflow
+        uses: actions/upload-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-macos-binary.zip
+          path: /tmp/palworld-server-toolkit-auto-update-macos-binary.zip
 
   build-windows-binary:
     runs-on: windows-latest
@@ -126,6 +136,11 @@ jobs:
           powershell Compress-Archive \tmp\palworld-server-toolkit-auto-update\palworld_server_toolkit\dist\palworld-server-toolkit-auto-update-windows-binary \tmp\palworld-server-toolkit-auto-update-windows-binary.zip
           dir \tmp
           echo '--> BUILDING "windows-binary" DONE! <--'
+      - name: uploding windows-binary artifact to workflow
+        uses: actions/upload-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-windows-binary.zip
+          path: /tmp/palworld-server-toolkit-auto-update-windows-binary.zip
 
   build-python-plain:
     runs-on: ubuntu-latest
@@ -139,6 +154,11 @@ jobs:
           git clone https://github.com/EternalWraith/PalEdit pal_edit
           git submodule update --remote
           cd /tmp
-          zip -r palworld-server-toolkit-auto-update-python-plain palworld-server-toolkit-auto-update
+          zip -r palworld-server-toolkit-auto-update-python-plain.zip palworld-server-toolkit-auto-update
           ls /tmp
           echo "--> BUILDING \"python-plain\" DONE! <--"
+      - name: uploding python-plain artifact to workflow
+        uses: actions/upload-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-python-plain.zip
+          path: /tmp/palworld-server-toolkit-auto-update-python-plain.zip
