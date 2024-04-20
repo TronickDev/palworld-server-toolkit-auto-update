@@ -155,10 +155,10 @@ jobs:
           git clone https://github.com/magicbear/PalEdit.git pal_edit
           git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
           git submodule update --remote
-          xcopy palworld_save_tools/palworld_save_tools/* palworld_save_tools/ /E/H/Y
-          xcopy save_tools/palworld_save_tools/* save_tools/ /E/H/Y
-          xcopy pal_edit/palworld_pal_edit/* pal_edit/ /E/H/Y
-          xcopy palworld_pal_edit/palworld_pal_edit/* palworld_pal_edit/ /E/H/Y
+          xcopy "palworld_save_tools\palworld_save_tools\*" "palworld_save_tools\" /E/H/Y
+          xcopy "save_tools\palworld_save_tools\*" "save_tools\" /E/H/Y
+          xcopy "pal_edit\palworld_pal_edit\*" "pal_edit\" /E/H/Y
+          xcopy "palworld_pal_edit\palworld_pal_edit\*" "palworld_pal_edit\" /E/H/Y
       - name: pip install modules requirements
         run: |
           cd /tmp/palworld-server-toolkit-auto-update
@@ -220,3 +220,40 @@ jobs:
         with:
           name: palworld-server-toolkit-auto-update-python-plain.zip
           path: /tmp/palworld-server-toolkit-auto-update-python-plain.zip
+
+  job_3:
+    name: create release
+    needs: 
+      - build-linux-binary
+      - build-macos-binary
+      - build-windows-binary
+      - build-python-plain
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: download results from job build-linux-binary
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-linux-binary.zip
+      - name: download results from job build-macos-binary
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-macos-binary.zip
+      - name: download results from job build-windows-binary
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-windows-binary.zip
+      - name: download results from job build-python-plain
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-python-plain.zip
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        if: startsWith(github.ref, 'refs/tags/')
+        with:
+          files: |
+            palworld-server-toolkit-auto-update-linux-binary.zip
+            palworld-server-toolkit-auto-update-macos-binary.zip
+            palworld-server-toolkit-auto-update-windows-binary.zip
+            palworld-server-toolkit-auto-update-python-plain.zip
