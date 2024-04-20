@@ -174,9 +174,9 @@ jobs:
           cd /tmp
           mkdir palworld-server-toolkit-auto-update-windows-binary
           mkdir palworld-server-toolkit-auto-update-windows-binary/resources
-          xcopy /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/dist/* /tmp/palworld-server-toolkit-auto-update-windows-binary /E/H/Y
-          xcopy /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/resources/* /tmp/palworld-server-toolkit-auto-update-windows-binary/resources /E/H/Y
-          xcopy /tmp/palworld-server-toolkit-auto-update/palworld_pal_edit/resources/* /tmp/palworld-server-toolkit-auto-update-windows-binary/resources /E/H/Y
+          xcopy "\tmp\palworld-server-toolkit-auto-update\palworld_server_toolkit\dist\*" "\tmp\palworld-server-toolkit-auto-update-windows-binary" /E/H/Y
+          xcopy "\tmp\palworld-server-toolkit-auto-update\palworld_server_toolkit\resources\*" "\tmp\palworld-server-toolkit-auto-update-windows-binary\resources" /E/H/Y
+          xcopy "\tmp\palworld-server-toolkit-auto-update\palworld_pal_edit\resources\*" "\tmp\palworld-server-toolkit-auto-update-windows-binary\resources" /E/H/Y
           powershell Compress-Archive /tmp/palworld-server-toolkit-auto-update-windows-binary /tmp/palworld-server-toolkit-auto-update-windows-binary.zip
       - name: show result
         run: |
