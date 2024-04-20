@@ -26,7 +26,7 @@ jobs:
       - uses: actions/checkout@v3
 
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: create-python-plain
         run: |
           cd /tmp
           git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
