@@ -49,12 +49,12 @@ jobs:
           cd ../palworld_server_toolkit
           pyinstaller --noconfirm --onefile --windowed --hidden-import=PIL "editor.py"
           cd dist
-          mkdir palworld-server-toolkit-auto-update-linux-binary
-          mv editor palworld-server-toolkit-auto-update-linux-binary/
-          mv editor.app palworld-server-toolkit-auto-update-linux-binary/
-          mkdir palworld-server-toolkit-auto-update-linux-binary/resources
-          cp -rf ../../palworld_pal_edit/resources/* palworld-server-toolkit-auto-update-linux-binary/resources/
-          cp -rf ../resources/* palworld-server-toolkit-auto-update-linux-binary/resources/
-          zip -r /tmp/palworld-server-toolkit-auto-update-linux-binary.zip /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/dist/palworld-server-toolkit-auto-update-linux-binary
+          mkdir palworld-server-toolkit-auto-update-macos-binary
+          mv editor palworld-server-toolkit-auto-update-macos-binary/
+          mv editor.app palworld-server-toolkit-auto-update-macos-binary/
+          mkdir palworld-server-toolkit-auto-update-macos-binary/resources
+          cp -rf ../../palworld_pal_edit/resources/* palworld-server-toolkit-auto-update-macos-binary/resources/
+          cp -rf ../resources/* palworld-server-toolkit-auto-update-macos-binary/resources/
+          zip -r /tmp/palworld-server-toolkit-auto-update-macos-binary.zip /tmp/palworld-server-toolkit-auto-update/palworld_server_toolkit/dist/palworld-server-toolkit-auto-update-macos-binary
           ls /tmp
           echo "--> BUILDING DONE! <--"
