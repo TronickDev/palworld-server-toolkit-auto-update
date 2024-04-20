@@ -28,7 +28,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          sudo apt install zip unzip
           pip install --upgrade pip
           pip install palworld_coord msgpack pyperclip
           cd /tmp
