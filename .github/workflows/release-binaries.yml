@@ -127,8 +127,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: palworld-server-toolkit-auto-update-macos-binary
-          path: /tmp/palworld-server-toolkit-auto-update-macos-binary.zip
-      
+          path: /tmp/palworld-server-toolkit-auto-update-macos-binary.zip   
 
   build-windows-binary:
     runs-on: windows-latest
@@ -188,7 +187,6 @@ jobs:
         with:
           name: palworld-server-toolkit-auto-update-windows-binary
           path: /tmp/palworld-server-toolkit-auto-update-windows-binary.zip
-      
 
   build-python-plain:
     runs-on: ubuntu-latest
@@ -220,3 +218,43 @@ jobs:
         with:
           name: palworld-server-toolkit-auto-update-python-plain
           path: /tmp/palworld-server-toolkit-auto-update-python-plain.zip
+
+  create-release:
+    needs: 
+      - build-linux-binary
+      - build-macos-binary
+      - build-windows-binary
+      - build-python-plain
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: download results from job build-linux-binary
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-linux-binary
+      - name: download results from job build-macos-binary
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-macos-binary
+      - name: download results from job build-windows-binary
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-windows-binary
+      - name: download results from job build-python-plain
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-python-plain
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name: Palworld Server Toolkit for Palworld Steam v0.2.2.0
+          body: "Date: 2024-04-21 - Please note, this version will only work with Palworld save files from the time where Palworld Steam version was on v0.2.2.0. This will also work with palworld save files from other systems (Xbox One, Xbox Series, Microsoft Windows) with diffrent version numbers from the same time." 
+          draft: 0
+          prerelease: 0
+          tag_name: v0.2.2.0
+          files: |
+            palworld-server-toolkit-auto-update-linux-binary.zip
+            palworld-server-toolkit-auto-update-macos-binary.zip
+            palworld-server-toolkit-auto-update-windows-binary.zip
+            palworld-server-toolkit-auto-update-python-plain.zip
