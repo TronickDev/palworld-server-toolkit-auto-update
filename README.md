@@ -1,7 +1,10 @@
-# palworld-server-toolkit-auto-update
-Just a repo to auto update the palworld-server-toolkit from @magicbear.
-Link: https://github.com/magicbear/palworld-server-toolkit
+# Palworld Server Toolkit Auto Update Repo
+<p align="center">
+    <p>Just a repo to auto update the palworld-server-toolkit from <strong>@magicbear</strong>.</p>
+	<p><strong>Link:</strong> https://github.com/magicbear/palworld-server-toolkit</p>
+</p>
 
+#
 Original README.en.md from @magicbear
 
 # Palworld Server Toolkit
