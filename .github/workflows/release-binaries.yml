@@ -223,42 +223,42 @@ jobs:
           name: palworld-server-toolkit-auto-update-python-plain
           path: /tmp/palworld-server-toolkit-auto-update-python-plain.zip
 
-  #create-release:
-  #  needs: 
-  #    - build-linux-binary
-  #    - build-macos-binary
-  #    - build-windows-binary
-  #    - build-python-plain
-  #  runs-on: ubuntu-latest
-  #  steps:
-  #    - name: Checkout repository
-  #      uses: actions/checkout@v4
-  #    - name: download results from job build-linux-binary
-  #      uses: actions/download-artifact@v4
-  #      with:
-  #        name: palworld-server-toolkit-auto-update-linux-binary
-  #    - name: download results from job build-macos-binary
-  #      uses: actions/download-artifact@v4
-  #      with:
-  #        name: palworld-server-toolkit-auto-update-macos-binary
-  #    - name: download results from job build-windows-binary
-  #      uses: actions/download-artifact@v4
-  #      with:
-  #        name: palworld-server-toolkit-auto-update-windows-binary
-  #    - name: download results from job build-python-plain
-  #      uses: actions/download-artifact@v4
-  #      with:
-  #        name: palworld-server-toolkit-auto-update-python-plain
-  #    - name: Release
-  #      uses: softprops/action-gh-release@v2
-  #      with:
-  #        name:  "Palworld Server Toolkit for Palworld Steam v0.2.2.0 - Release 2 - 2024-04-22-18-32"
-  #        body: "Date: 2024-04-22 - Updated the source of one submodule as well making sure the all submodules are up to date."
-  #        draft: 0
-  #        prerelease: 0
-  #        tag_name: v0.2.2.0
-  #        files: |
-  #          palworld-server-toolkit-auto-update-linux-binary.zip
-  #          palworld-server-toolkit-auto-update-macos-binary.zip
-  #          palworld-server-toolkit-auto-update-windows-binary.zip
-  #          palworld-server-toolkit-auto-update-python-plain.zip
+  create-release:
+    needs: 
+      - build-linux-binary
+      - build-macos-binary
+      - build-windows-binary
+      - build-python-plain
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: download results from job build-linux-binary
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-linux-binary
+      - name: download results from job build-macos-binary
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-macos-binary
+      - name: download results from job build-windows-binary
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-windows-binary
+      - name: download results from job build-python-plain
+        uses: actions/download-artifact@v4
+        with:
+          name: palworld-server-toolkit-auto-update-python-plain
+      - name: Release
+        uses: softprops/action-gh-release@v2
+        with:
+          name:  "Palworld Server Toolkit for Palworld Steam v0.2.2.0 - Release 2 - 2024-04-22-18-40"
+          body: "Date: 2024-04-22 - Updated the source of one submodule as well making sure the all submodules are up to date."
+          draft: 0
+          prerelease: 0
+          tag_name: v0.2.2.0
+          files: |
+            palworld-server-toolkit-auto-update-linux-binary.zip
+            palworld-server-toolkit-auto-update-macos-binary.zip
+            palworld-server-toolkit-auto-update-windows-binary.zip
+            palworld-server-toolkit-auto-update-python-plain.zip
