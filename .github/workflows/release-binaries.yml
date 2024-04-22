@@ -252,8 +252,8 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          name:  Palworld Server Toolkit for Palworld Steam v0.2.2.0 - Release 2
-          body: "Date: 2024-04-22 - Updated the source of one submodule as well making sure the all submodules are up to date. 
+          name:  "Palworld Server Toolkit for Palworld Steam v0.2.2.0 - Release 2 - 2024-04-22-18-32"
+          body: "Date: 2024-04-22 - Updated the source of one submodule as well making sure the all submodules are up to date."
           draft: 0
           prerelease: 0
           tag_name: v0.2.2.0
