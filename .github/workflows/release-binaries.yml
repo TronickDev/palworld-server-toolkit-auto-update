@@ -35,8 +35,9 @@ jobs:
           git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git palworld_save_tools
-          git clone https://github.com/magicbear/PalEdit.git pal_edit
-          git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
+          git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
+          git clone https://github.com/EternalWraith/PalEdit.git palworld_pal_edit
+          git clone https://github.com/EternalWraith/PalEdit.git pal_edit
           git submodule update --remote
           cp -rf palworld_save_tools/palworld_save_tools/* palworld_save_tools/
           cp -rf save_tools/palworld_save_tools/* save_tools/
@@ -92,8 +93,9 @@ jobs:
           git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git palworld_save_tools
-          git clone https://github.com/magicbear/PalEdit.git pal_edit
-          git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
+          git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
+          git clone https://github.com/EternalWraith/PalEdit.git palworld_pal_edit
+          git clone https://github.com/EternalWraith/PalEdit.git pal_edit
           git submodule update --remote
           cp -rf palworld_save_tools/palworld_save_tools/* palworld_save_tools/
           cp -rf save_tools/palworld_save_tools/* save_tools/
@@ -151,8 +153,9 @@ jobs:
           git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git palworld_save_tools
-          git clone https://github.com/magicbear/PalEdit.git pal_edit
-          git clone https://github.com/magicbear/PalEdit.git palworld_pal_edit
+          git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
+          git clone https://github.com/EternalWraith/PalEdit.git palworld_pal_edit
+          git clone https://github.com/EternalWraith/PalEdit.git pal_edit
           git submodule update --remote
           xcopy "palworld_save_tools\palworld_save_tools\*" "palworld_save_tools\" /E/H/Y
           xcopy "save_tools\palworld_save_tools\*" "save_tools\" /E/H/Y
@@ -202,6 +205,7 @@ jobs:
           cd /tmp
           git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
+          git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
           git clone https://github.com/EternalWraith/PalEdit pal_edit
           git submodule update --remote
       - name: create zip file
@@ -248,8 +252,8 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          name: Palworld Server Toolkit for Palworld Steam v0.2.2.0
-          body: "Date: 2024-04-21 - Please note, this version will only work with Palworld save files from the time where Palworld Steam version was on v0.2.2.0. This will also work with palworld save files from other systems (Xbox One, Xbox Series, Microsoft Windows) with diffrent version numbers from the same time." 
+          name:  Palworld Server Toolkit for Palworld Steam v0.2.2.0 - Release 2
+          body: "Date: 2024-04-22 - Updated the source of one submodule as well making sure the all submodules are up to date. 
           draft: 0
           prerelease: 0
           tag_name: v0.2.2.0
