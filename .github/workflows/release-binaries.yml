@@ -32,7 +32,7 @@ jobs:
       - name: clone and setup repos
         run: |
           cd /tmp
-          git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
+          git clone https://github.com/magicbear/palworld-server-toolkit.git palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git palworld_save_tools
           git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
@@ -90,7 +90,7 @@ jobs:
       - name: clone and setup repos
         run: |
           cd /tmp
-          git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
+          git clone https://github.com/magicbear/palworld-server-toolkit.git palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git palworld_save_tools
           git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
@@ -150,7 +150,7 @@ jobs:
           cd /
           mkdir tmp
           cd /tmp
-          git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
+          git clone https://github.com/magicbear/palworld-server-toolkit.git palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git palworld_save_tools
           git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
@@ -203,7 +203,7 @@ jobs:
       - name: clone and setup repos
         run: |
           cd /tmp
-          git clone https://github.com/magicbear/palworld-server-toolkit.git --recurse-submodules palworld-server-toolkit-auto-update
+          git clone https://github.com/magicbear/palworld-server-toolkit.git palworld-server-toolkit-auto-update
           cd palworld-server-toolkit-auto-update
           git clone https://github.com/cheahjs/palworld-save-tools.git save_tools
           git clone https://github.com/EternalWraith/PalEdit pal_edit
