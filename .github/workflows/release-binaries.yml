@@ -252,8 +252,8 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v2
         with:
-          name: "Palworld Server Toolkit for Palworld Steam v0.2.2.0 & v0.2.3.0 - Release 1 - 2024-04-22-19-00"
-          body: "Date: 2024-04-23 - Please note, this version will only work with Palworld save files from the time where Palworld Steam version was on v0.2.2.0. This will also work with Palworld save files from other systems (Xbox One, Xbox Series, Microsoft Windows) with different version numbers from the same time."
+          name: "Palworld Server Toolkit for Palworld Steam v0.2.2.0, v0.2.3.0 & v0.2.4.0 - Release 1 - 2024-05-16-00-02"
+          body: "Date: 2024-05-16-00-02 - Please note, this version will only work with Palworld save files from the time where Palworld Steam version was on v0.2.2.0, v0.2.3.0 & v0.2.4.0. This will also work with Palworld save files from other systems (Xbox One, Xbox Series, Microsoft Windows) with different version numbers from the same time."
           draft: 0
           prerelease: 0
           tag_name: v0.2.2.0-#1
